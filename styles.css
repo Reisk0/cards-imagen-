@@ -1,0 +1,85 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif; 
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    max-width: 1400px; /*con esto controlamos el maximo ancho de las imagenes dentro del contenedor*/
+    
+}
+
+
+/*.container::before {
+    content: "";
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0,14,36);
+    background: linear-gradient(90deg, rgba(0,14,36,1) 0%, rgba(237,109,109,0.5886729691876751) 0%, rgba(0,212,255,1) 100%);
+}*/
+.card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+
+.card img{  /*asi es como se soluciona el problema de que la imagen quede muy grande para el contenido del div*/
+ width: 100%;
+ height: 210px;
+}
+
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+
+.card .contenido p{
+    line-height: 1.5; /*esta etiqueta sirve para la separacion entre lineas de texto*/
+    color: #6a6a6a;
+}
+
+.card .contenido h3 {
+    font-weight: 400; /*con esto reducimos el color negro de las letras en negrita*/
+    margin-bottom: 15px; /*con esto el h3 empuja hacia abajo el contenido de p*/
+}
+
+.card .contenido a{
+    text-decoration: none; /*esto quita el subrayado de los links*/
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px; /*con esto separamos el link de la etiqueta a de del contido del elemento p*/
+    color: #2fb4cc; /*esto le da color a al marco de la a*/
+    border: 1px solid  #2fb4cc; /*con esto ponemos un marco alrededor de la etiqueta a*/
+    border-radius: 4px ; /*con esto le damos un borde redondeado al marco del a*/
+    transition: all 400ms ease;
+}
+
+.card .contenido a:hover {
+    background:  #2fb4cc; /*con esto hacemos que al poner el cursor en el boton cambie a color asignado*/
+    color: #fff;
+}
